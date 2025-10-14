@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Carros</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Cadastro de Carros</h1>
+    
+    <div class="container">
+        <form id="carForm">
+            <input type="text" id="marca" placeholder="Marca" required>
+            <input type="text" id="modelo" placeholder="Modelo" required>
+            <input type="number" id="ano" placeholder="Ano" min="1900" max="2099" required>
+            <input type="text" id="cor" placeholder="Cor" required>
+            <input type="text" id="placa" placeholder="Placa" required>
+            <button type="submit">Cadastrar Carro</button>
+        </form>
+
+        <table id="tableCarros">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ano</th>
+                    <th>Cor</th>
+                    <th>Placa</th>
+                </tr>
+            </thead>
+            <tbody id="listaCarros">
+                <tr class="no-data">
+                    <td colspan="5">Nenhum carro cadastrado ainda</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>
