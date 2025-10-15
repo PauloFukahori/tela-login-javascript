@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Acesso - Sistema de Carros</title>
+    <link rel="stylesheet" href="css/estiloslogin.css">
+    </head>
+<body class="auth-page">
+    
+    <header class="header">
+        <div class="brand">
+            <a href="index.html" class="name">Sistema de Carros</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="card">
+            
+            <div class="login-header">
+                <div class="login-icon">
+                    <img src="img/login.png" alt="Ícone de usuário"> 
+                </div>
+                
+                <h1>Entrar na sua Conta</h1>
+                <p class="subtitle">Acesso rápido ao seu painel. Use suas credenciais.</p>
+            </div>
+
+            <form class="form" id="loginForm">
+                
+                <div class="form-group">
+                    <label class="label" for="email">E-mail</label>
+                    <input class="input" id="email" type="email" placeholder="voce@email.com" autocomplete="username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="label" for="senha">Senha</label>
+                    <input class="input" id="senha" type="password" minlength="6" placeholder="••••••••" autocomplete="current-password" required>
+                </div>
+
+                <div class="helper">
+                    <label class="toggle-password-label">
+                        <input type="checkbox" id="togglePwdCheckbox" aria-controls="senha"> 
+                        Mostrar senha
+                    </label>
+                    <a href="recuperar-senha.html">Esqueceu a senha?</a>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Entrar</button>
+                <a href="cadastro.html" class="btn btn-ghost" role="button">Criar conta</a>
+
+                <div class="badges" aria-label="Recursos do sistema">
+                    <span class="badge">Acessível</span>
+                    <span class="badge">Eficiente</span>
+                    <span class="badge">Seguro</span>
+                    <span class="badge">Rápido</span>
+                </div>
+            </form>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 - <strong>Sistema de Carros</strong></p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('loginForm');
+        const senhaInput = document.getElementById('senha');
+        const toggleCheckbox = document.getElementById('togglePwdCheckbox');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'dashboard.html';
+        });
+
+        toggleCheckbox.addEventListener('change', function() {
+            senhaInput.type = this.checked ? 'text' : 'password';
+        });
+    </script>
+</body>
+</html>

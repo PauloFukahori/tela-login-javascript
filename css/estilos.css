@@ -1,0 +1,95 @@
+/* ======== ESTILO GERAL ======== */
+
+/* Define fonte padrão, remove margens e centraliza conteúdo */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* Fundo com degradê azul */
+  color: #333; /* Cor padrão do texto */
+  margin: 0; /* Remove espaçamento externo padrão */
+  padding: 0; /* Remove espaçamento interno padrão */
+  display: flex; /* Usa Flexbox */
+  flex-direction: column; /* Organiza em coluna (de cima pra baixo) */
+  align-items: center; /* Centraliza horizontalmente */
+  min-height: 100vh; /* Ocupa toda a altura da tela */
+}
+
+/* ======== TÍTULO ======== */
+h1 {
+  color: white; /* Texto branco */
+  margin-top: 30px; /* Espaço superior */
+  text-align: center; /* Centraliza o texto */
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.container {
+  background: white; /* Fundo branco */
+  border-radius: 15px; /* Cantos arredondados */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2); /* Sombra leve */
+  padding: 30px; /* Espaçamento interno */
+  margin-top: 20px; /* Espaço acima */
+  width: 90%; /* Responsivo — ocupa até 90% da tela */
+  max-width: 600px; /* Limite máximo */
+}
+
+/* ======== FORMULÁRIO ======== */
+form {
+  display: flex; /* Usa Flexbox */
+  flex-wrap: wrap; /* Quebra linha quando não couber */
+  justify-content: space-between; /* Espaço igual entre os campos */
+  gap: 15px; /* Espaçamento entre os elementos */
+}
+
+/* Campos de entrada */
+form input {
+  flex: 1 1 45%; /* Cada campo ocupa 45% da linha */
+  min-width: 45%; /* Evita que encolha demais */
+  padding: 10px; /* Espaço interno */
+  border: 1px solid #ccc; /* Borda cinza clara */
+  border-radius: 8px; /* Cantos arredondados */
+  font-size: 1em; /* Tamanho de fonte padrão */
+}
+
+/* Botão do formulário */
+form button {
+  flex: 1 1 100%; /* Ocupa linha inteira */
+  padding: 12px; /* Espaçamento interno */
+  background: #1e3c72; /* Azul escuro */
+  color: white; /* Texto branco */
+  border: none; /* Remove borda padrão */
+  border-radius: 8px; /* Cantos arredondados */
+  cursor: pointer; /* Muda cursor para "mãozinha" */
+  font-size: 1em; /* Fonte padrão */
+  transition: background 0.3s ease; /* Animação suave na cor */
+}
+
+/* Efeito hover (quando o mouse passa em cima) */
+form button:hover {
+  background: #2a5298; /* Azul mais claro */
+}
+
+/* ======== TABELA ======== */
+table {
+  margin-top: 30px; /* Espaçamento superior */
+  width: 100%; /* Ocupa toda a largura do container */
+  border-collapse: collapse; /* Remove espaços entre bordas */
+  text-align: left; /* Alinha texto à esquerda */
+}
+
+/* Células da tabela */
+th, td {
+  padding: 12px; /* Espaçamento interno */
+  border-bottom: 1px solid #ccc; /* Linha divisória */
+}
+
+/* Cabeçalho da tabela */
+th {
+  background-color: #1e3c72; /* Fundo azul */
+  color: white; /* Texto branco */
+}
+
+/* Linha de "nenhum dado" */
+.no-data {
+  text-align: center; /* Centraliza o texto */
+  color: #777; /* Cinza claro */
+  padding: 15px; /* Espaçamento interno */
+}
